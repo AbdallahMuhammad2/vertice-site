@@ -25,7 +25,7 @@ function App() {
           {/* Apenas a logo, sem texto e sem o contêiner extra */}
           <a href="#">
             <img
-              src="vertice_branco.png"
+              src="assets/vertice_branco.png"
               alt="Logo Vértice"
               className="w-14 h-14"
             />
@@ -49,7 +49,7 @@ function App() {
   {/* Background com a imagem */}
   <div className="absolute inset-0 overflow-hidden -z-10">
     <img
-      src="bg.jpeg" // Substitua pelo caminho correto da imagem
+      src="assets/bg.jpeg" // Substitua pelo caminho correto da imagem
       alt="Background Hero"
       className="w-full h-full object-cover"
     />
@@ -183,7 +183,7 @@ function App() {
       {/* =================== SUCCESS STORIES WITH VIDEO BG =================== */}
       <section className="aprovados relative py-20 overflow-hidden">
         <video
-          src="201735-916310640_small.mp4"
+          src="assets/201735-916310640_small.mp4"
           autoPlay
           loop
           muted
@@ -256,7 +256,7 @@ function App() {
     </h2>
     <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-white shadow-2xl rounded-xl overflow-hidden">
       <div className="relative h-full">
-        <img src="sobre.jpg" alt="Estudantes no Vértice Preparatório" className="w-full h-full object-cover" />
+        <img src="assets/sobre.jpg" alt="Estudantes no Vértice Preparatório" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
         <div className="absolute bottom-8 left-8 text-white">
           <h3 className="text-3xl font-bold">Transformando Sonhos em Conquistas</h3>
@@ -271,21 +271,14 @@ function App() {
         </p>
         <p className="mb-6 text-lg text-gray-700 leading-relaxed">
           Confiamos tanto na qualidade de nossa preparação que proporcionamos aos novos alunos
-          <span className="font-semibold text-green-600">15 dias gratuitos</span> para experimentar nossos métodos. Você poderá acessar
+          <span className="font-semibold text-green-600"> 15 dias gratuitos</span> para experimentar nossos métodos. Você poderá acessar
           nossos materiais, interagir com nossa equipe e vivenciar a excelência do ensino.
         </p>
         <p className="mb-6 text-lg text-gray-700 leading-relaxed">
           Nossa equipe de <span className="font-semibold">professores qualificados</span> conhece a fundo os conteúdos exigidos
           nos concursos e utiliza <span className="font-medium">técnicas de ensino inovadoras</span> para maximizar o aprendizado.
         </p>
-        <p className="mb-6 text-lg text-gray-700 leading-relaxed">
-          Criamos o programa <span className="font-semibold text-green-600">"Embaixadores do Vértice"</span>, no qual os alunos
-          recebem <span className="font-medium">conteúdos exclusivos</span>, suporte personalizado e nivelamento para potencializar seus estudos.
-        </p>
-        <p className="mb-6 text-lg text-gray-700 leading-relaxed">
-           Inscrições abertas para o <span className="font-semibold text-green-600">Bolsão 2025</span>! Não perca essa
-          oportunidade de se preparar com os melhores e transformar sua trajetória acadêmica.
-        </p>
+       
         <p className="text-center font-bold text-gray-900 text-xl mt-8">
           No Vértice Preparatório, <span className="text-green-600">seu objetivo é o nosso compromisso</span>.
         </p>
@@ -309,8 +302,7 @@ function App() {
             Fera! Conta comigo <Heart className="inline-block text-pink-300" />
           </h2>
           <p className="text-xl mb-12 max-w-2xl mx-auto text-white/90">
-            Sua melhor preparação em MATEMÁTICA de forma assertiva e com
-            estratégia, muita competência e habilidade{' '}
+          Ambiente com ecossistema ideal para a preparação de alta performance para carreiras militares e vestibulares. {' '}
             <span className="font-bold">😎</span>
           </p>
           <button className="bg-white text-emerald-600 px-8 py-4 rounded-full hover:bg-gray-50 transition transform hover:scale-105 shadow-xl font-bold">
@@ -326,7 +318,7 @@ function App() {
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <img
-                src="vertice_branco.png" // Replace with the actual path to your logo
+                src="assets/vertice_branco.png" // Replace with the actual path to your logo
                 alt="Vértice Preparatório Logo"
                 className="w-auto h-12" // Adjust height as needed
               />
