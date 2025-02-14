@@ -16,6 +16,14 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+import logo from './imgs/vertice_branco.png';
+import bgImage from './imgs/bg.jpeg'; // Atualizado
+import sobreImage from './imgs/sobre.jpg'; // Atualizado
+import yasminImage from './imgs/472533518_17916948183046000_8454459361416418394_n.jpg.jpg'; // Atualizado
+import samuelImage from './imgs/473796899_17916781782046000_8933566223774488837_n.jpg'; // Atualizado
+import guilhermeImage from './imgs/474016133_17916918903046000_4004342718776490011_n.jpg'; // Atualizado
+import claraImage from './imgs/474084415_17916911022046000_6032978335600401682_n.jpg'; // Atualizado
+
 function App() {
   return (
     <div className="min-h-screen font-sans text-gray-900 flex flex-col">
@@ -25,7 +33,7 @@ function App() {
           {/* Apenas a logo, sem texto e sem o contêiner extra */}
           <a href="#">
             <img
-              src="assets/vertice_branco.png"
+              src={logo} // Atualizado
               alt="Logo Vértice"
               className="w-14 h-14"
             />
@@ -44,62 +52,62 @@ function App() {
         </nav>
       </header>
 
-   {/* =================== HERO SECTION =================== */}
-<section className="relative flex items-center min-h-screen pt-24 pb-20">
-  {/* Background com a imagem */}
-  <div className="absolute inset-0 overflow-hidden -z-10">
-    <img
-      src="assets/bg.jpeg" // Substitua pelo caminho correto da imagem
-      alt="Background Hero"
-      className="w-full h-full object-cover"
-    />
-    <div className="absolute inset-0 bg-black/40" /> {/* Overlay escuro para melhorar a legibilidade do texto */}
-  </div>
-
-  <div className="container mx-auto px-4 relative z-10">
-    <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-      <div className="lg:w-1/2 text-white">
-        <div className="inline-flex items-center bg-white/10 backdrop-blur-md rounded-full px-4 py-2 mb-6 shadow-xl">
-          <Star className="w-4 h-4 text-yellow-400 mr-2" />
-          <span className="text-sm font-medium">
-            Venha garantir sua aprovação!
-          </span>
+      {/* =================== HERO SECTION =================== */}
+      <section className="relative flex items-center min-h-screen pt-24 pb-20">
+        {/* Background com a imagem */}
+        <div className="absolute inset-0 overflow-hidden -z-10">
+          <img
+            src={bgImage} // Atualizado
+            alt="Background Hero"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40" /> {/* Overlay escuro para melhorar a legibilidade do texto */}
         </div>
 
-        <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight drop-shadow-lg">
-          Alcance sua aprovação com um dos melhores cursos preparatórios do Brasil.
-        </h1>
-        <p className="text-xl text-white/80 mb-8 leading-relaxed drop-shadow-sm">
-          Domine os conteúdos essenciais e aprenda com as melhores estratégias para conquistar sua vaga nos vestibulares e concursos mais concorridos.
-        </p>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div className="lg:w-1/2 text-white">
+              <div className="inline-flex items-center bg-white/10 backdrop-blur-md rounded-full px-4 py-2 mb-6 shadow-xl">
+                <Star className="w-4 h-4 text-yellow-400 mr-2" />
+                <span className="text-sm font-medium">
+                  Venha garantir sua aprovação!
+                </span>
+              </div>
 
-        <div className="flex flex-wrap gap-4">
-          <button className="bg-pink-500 text-white px-8 py-4 rounded-full hover:bg-pink-600 transition transform hover:scale-105 shadow-2xl hover:shadow-pink-500/30 font-semibold">
-            Comece Agora Mesmo
-          </button>
-          <button className="bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-full hover:bg-white/20 transition transform hover:scale-105 font-semibold">
-            Conheça o Método
-          </button>
+              <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight drop-shadow-lg">
+                Alcance sua aprovação com um dos melhores cursos preparatórios do Brasil.
+              </h1>
+              <p className="text-xl text-white/80 mb-8 leading-relaxed drop-shadow-sm">
+                Domine os conteúdos essenciais e aprenda com as melhores estratégias para conquistar sua vaga nos vestibulares e concursos mais concorridos.
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <button className="bg-pink-500 text-white px-8 py-4 rounded-full hover:bg-pink-600 transition transform hover:scale-105 shadow-2xl hover:shadow-pink-500/30 font-semibold">
+                  Comece Agora Mesmo
+                </button>
+                <button className="bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-full hover:bg-white/20 transition transform hover:scale-105 font-semibold">
+                  Conheça o Método
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  {/* Onda no final da seção */}
-  <div className="absolute bottom-0 left-0 right-0 overflow-hidden text-white">
-    <svg
-      className="w-full h-16 lg:h-32"
-      viewBox="0 0 1440 320"
-      preserveAspectRatio="none"
-    >
-      <path
-        fill="currentColor"
-        fillOpacity="1"
-        d="M0,224L60,197.3C120,171,240,117,360,101.3C480,85,600,107,720,138.7C840,171,960,213,1080,234.7C1200,256,1320,256,1380,256L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-      />
-    </svg>
-  </div>
-</section>
+        {/* Onda no final da seção */}
+        <div className="absolute bottom-0 left-0 right-0 overflow-hidden text-white">
+          <svg
+            className="w-full h-16 lg:h-32"
+            viewBox="0 0 1440 320"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              fillOpacity="1"
+              d="M0,224L60,197.3C120,171,240,117,360,101.3C480,85,600,107,720,138.7C840,171,960,213,1080,234.7C1200,256,1320,256,1380,256L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+            />
+          </svg>
+        </div>
+      </section>
 
       {/* =================== FEATURES SECTION =================== */}
       <section className="relative py-20 bg-white">
@@ -217,23 +225,19 @@ function App() {
             {[
               {
                 name: 'Yasmin de Lima',
-                image:
-                  '472533518_17916948183046000_8454459361416418394_n.jpg.jpg',
+                image: yasminImage, // Atualizado
               },
               {
                 name: 'Samuel Mendonça',
-                image:
-                  '473796899_17916781782046000_8933566223774488837_n.jpg',
+                image: samuelImage, // Atualizado
               },
               {
                 name: 'Guilherme Oliveira',
-                image:
-                  '474016133_17916918903046000_4004342718776490011_n.jpg',
+                image: guilhermeImage, // Atualizado
               },
               {
                 name: 'Clara Menezes',
-                image:
-                  '474084415_17916911022046000_6032978335600401682_n.jpg',
+                image: claraImage, // Atualizado
               },
             ].map((student, index) => (
               <SwiperSlide key={index}>
@@ -249,48 +253,51 @@ function App() {
           </Swiper>
         </div>
       </section>
+
+      {/* =================== ABOUT SECTION =================== */}
       <section className="py-20 bg-gradient-to-b from-gray-100 to-gray-200">
-  <div className="container mx-auto px-6 lg:px-12">
-    <h2 className="text-5xl font-extrabold text-center text-gray-900 mb-10">
-      Sobre a <span className="text-green-600">Vértice Preparatório</span>
-    </h2>
-    <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-white shadow-2xl rounded-xl overflow-hidden">
-      <div className="relative h-full">
-        <img src="assets/sobre.jpg" alt="Estudantes no Vértice Preparatório" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-        <div className="absolute bottom-8 left-8 text-white">
-          <h3 className="text-3xl font-bold">Transformando Sonhos em Conquistas</h3>
-          <p className="text-lg mt-2">Preparação de excelência para concursos e vestibulares.</p>
+        <div className="container mx-auto px-6 lg:px-12">
+          <h2 className="text-5xl font-extrabold text-center text-gray-900 mb-10">
+            Sobre a <span className="text-green-600">Vértice Preparatório</span>
+          </h2>
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-white shadow-2xl rounded-xl overflow-hidden">
+            <div className="relative h-full">
+              <img src={sobreImage} alt="Estudantes no Vértice Preparatório" className="w-full h-full object-cover" /> {/* Atualizado */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+              <div className="absolute bottom-8 left-8 text-white">
+                <h3 className="text-3xl font-bold">Transformando Sonhos em Conquistas</h3>
+                <p className="text-lg mt-2">Preparação de excelência para concursos e vestibulares.</p>
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="mb-6 text-lg text-gray-700 leading-relaxed">
+                No <span className="font-semibold text-green-600">Vértice Preparatório</span>, nossa missão é transformar sonhos em conquistas.
+                Especializados na preparação para <span className="font-medium">concursos militares</span> e <span className="font-medium">vestibulares</span>,
+                oferecemos uma abordagem educacional que combina tradição e inovação.
+              </p>
+              <p className="mb-6 text-lg text-gray-700 leading-relaxed">
+                Confiamos tanto na qualidade de nossa preparação que proporcionamos aos novos alunos
+                <span className="font-semibold text-green-600"> 15 dias gratuitos</span> para experimentar nossos métodos. Você poderá acessar
+                nossos materiais, interagir com nossa equipe e vivenciar a excelência do ensino.
+              </p>
+              <p className="mb-6 text-lg text-gray-700 leading-relaxed">
+                Nossa equipe de <span className="font-semibold">professores qualificados</span> conhece a fundo os conteúdos exigidos
+                nos concursos e utiliza <span className="font-medium">técnicas de ensino inovadoras</span> para maximizar o aprendizado.
+              </p>
+             
+              <p className="text-center font-bold text-gray-900 text-xl mt-8">
+                No Vértice Preparatório, <span className="text-green-600">seu objetivo é o nosso compromisso</span>.
+              </p>
+              <div className="mt-10 text-center">
+                <a href="#inscricao" className="inline-block bg-green-600 text-white text-lg font-semibold py-3 px-8 rounded-lg hover:bg-green-700 transition-colors duration-300">
+                  Inscreva-se Agora!
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="p-8">
-        <p className="mb-6 text-lg text-gray-700 leading-relaxed">
-          No <span className="font-semibold text-green-600">Vértice Preparatório</span>, nossa missão é transformar sonhos em conquistas.
-          Especializados na preparação para <span className="font-medium">concursos militares</span> e <span className="font-medium">vestibulares</span>,
-          oferecemos uma abordagem educacional que combina tradição e inovação.
-        </p>
-        <p className="mb-6 text-lg text-gray-700 leading-relaxed">
-          Confiamos tanto na qualidade de nossa preparação que proporcionamos aos novos alunos
-          <span className="font-semibold text-green-600"> 15 dias gratuitos</span> para experimentar nossos métodos. Você poderá acessar
-          nossos materiais, interagir com nossa equipe e vivenciar a excelência do ensino.
-        </p>
-        <p className="mb-6 text-lg text-gray-700 leading-relaxed">
-          Nossa equipe de <span className="font-semibold">professores qualificados</span> conhece a fundo os conteúdos exigidos
-          nos concursos e utiliza <span className="font-medium">técnicas de ensino inovadoras</span> para maximizar o aprendizado.
-        </p>
-       
-        <p className="text-center font-bold text-gray-900 text-xl mt-8">
-          No Vértice Preparatório, <span className="text-green-600">seu objetivo é o nosso compromisso</span>.
-        </p>
-        <div className="mt-10 text-center">
-          <a href="#inscricao" className="inline-block bg-green-600 text-white text-lg font-semibold py-3 px-8 rounded-lg hover:bg-green-700 transition-colors duration-300">
-            Inscreva-se Agora!
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
+
       {/* =================== CTA SECTION =================== */}
       <section className="relative py-20 mt-24 bg-gradient-to-br from-emerald-500 via-teal-500 to-blue-600 overflow-hidden">
         <div
@@ -313,105 +320,107 @@ function App() {
 
       {/* =================== FOOTER =================== */}
       <footer className="bg-gray-900 text-white pt-16 pb-8">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <img
-                src="assets/vertice_branco.png" // Replace with the actual path to your logo
-                alt="Vértice Preparatório Logo"
-                className="w-auto h-12" // Adjust height as needed
-              />
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div>
+              <div className="flex items-center space-x-2 mb-6">
+                <img
+                  src={logo} // Atualizado
+                  alt="Vértice Preparatório Logo"
+                  className="w-auto h-12" // Adjust height as needed
+                />
+              </div>
+              <p className="text-gray-400 mb-2">© 2025 - Vértice Preparatório</p>
+              <p className="text-gray-400">Todos Direitos Reservados.</p>
             </div>
-            <p className="text-gray-400 mb-2">© 2025 - Vértice Preparatório</p>
-            <p className="text-gray-400">Todos Direitos Reservados.</p>
-          </div>
 
-          <div>
-            <h3 className="font-bold text-lg mb-6">Conteúdo</h3>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition"
-                >
-Aprovados                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition"
-                >
-Sobre                </a>
-              </li>
-             
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition"
-                >
-                  Blog
-                </a>
-              </li>
-            </ul>
-          </div>
+            <div>
+              <h3 className="font-bold text-lg mb-6">Conteúdo</h3>
+              <ul className="space-y-4">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Aprovados
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Sobre
+                  </a>
+                </li>
+               
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Blog
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          <div>
-            <h3 className="font-bold text-lg mb-6">Comunidade</h3>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  href="https://www.whatsapp.com/channel/YOUR_WHATSAPP_LINK" // Replace with your WhatsApp link
-                  className="text-gray-400 hover:text-white transition"
-                  target="_blank" // Opens in a new tab
-                  rel="noopener noreferrer" // Important for security
-                >
-                  WhatsApp
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.youtube.com/@verticepreparatorio" // Replace with your YouTube link
-                  className="text-gray-400 hover:text-white transition"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  YouTube
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/verticepreparatorio" // Replace with your Instagram link
-                  className="text-gray-400 hover:text-white transition"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Instagram
-                </a>
-              </li>
-             
-            </ul>
-          </div>
+            <div>
+              <h3 className="font-bold text-lg mb-6">Comunidade</h3>
+              <ul className="space-y-4">
+                <li>
+                  <a
+                    href="https://www.whatsapp.com/channel/YOUR_WHATSAPP_LINK" // Replace with your WhatsApp link
+                    className="text-gray-400 hover:text-white transition"
+                    target="_blank" // Opens in a new tab
+                    rel="noopener noreferrer" // Important for security
+                  >
+                    WhatsApp
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/@verticepreparatorio" // Replace with your YouTube link
+                    className="text-gray-400 hover:text-white transition"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    YouTube
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/verticepreparatorio" // Replace with your Instagram link
+                    className="text-gray-400 hover:text-white transition"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Instagram
+                  </a>
+                </li>
+               
+              </ul>
+            </div>
 
-          <div>
-            <h3 className="font-bold text-lg mb-6">Newsletter</h3>
-            <p className="text-gray-400 mb-6">
-              Receba notícias e atualizações em seu email
-            </p>
-            <div className="flex flex-col space-y-4">
-              <input
-                type="email"
-                placeholder="Seu email"
-                className="bg-gray-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-              />
-              <button className="bg-emerald-500 text-white px-4 py-3 rounded-lg hover:bg-emerald-600 transition">
-                Assinar Newsletter
-              </button>
+            <div>
+              <h3 className="font-bold text-lg mb-6">Newsletter</h3>
+              <p className="text-gray-400 mb-6">
+                Receba notícias e atualizações em seu email
+              </p>
+              <div className="flex flex-col space-y-4">
+                <input
+                  type="email"
+                  placeholder="Seu email"
+                  className="bg-gray-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                />
+                <button className="bg-emerald-500 text-white px-4 py-3 rounded-lg hover:bg-emerald-600 transition">
+                  Assinar Newsletter
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
     </div>
   );
 }
