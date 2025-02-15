@@ -23,7 +23,7 @@ import yasminImage from './imgs/472533518_17916948183046000_8454459361416418394_
 import samuelImage from './imgs/473796899_17916781782046000_8933566223774488837_n.jpg'; // Atualizado
 import guilhermeImage from './imgs/474016133_17916918903046000_4004342718776490011_n.jpg'; // Atualizado
 import claraImage from './imgs/474084415_17916911022046000_6032978335600401682_n.jpg'; // Atualizado
-
+import bgvideo from './imgs/201735-916310640_small.mp4'; // Atualizado
 function App() {
   return (
     <div className="min-h-screen font-sans text-gray-900 flex flex-col">
@@ -191,7 +191,7 @@ function App() {
       {/* =================== SUCCESS STORIES WITH VIDEO BG =================== */}
       <section className="aprovados relative py-20 overflow-hidden">
         <video
-          src="assets/201735-916310640_small.mp4"
+          src={bgvideo}
           autoPlay
           loop
           muted
