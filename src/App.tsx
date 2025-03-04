@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Play,
   BookOpen,
@@ -29,23 +28,31 @@ function App() {
     <div className="min-h-screen font-sans text-gray-900 flex flex-col">
       {/* =================== HEADER =================== */}
       <header className="fixed w-full z-50">
-        <nav className="container mx-auto px-4 py-3 flex items-center justify-between bg-white/10 backdrop-blur-md rounded-b-3xl shadow-lg border-b border-white/10">
-          {/* Apenas a logo, sem texto e sem o contêiner extra */}
-          <a href="#">
+        <nav className="container mx-auto px-4 py-4 flex items-center justify-between backdrop-blur-lg bg-gradient-to-r from-emerald-600/80 to-teal-600/80 rounded-b-3xl shadow-xl border-b border-white/20">
+          <a href="#" className="flex items-center gap-3 group">
             <img
-              src={logo} // Atualizado
+              src={logo}
               alt="Logo Vértice"
-              className="w-14 h-14"
+              className="w-12 h-12 transition-transform group-hover:rotate-12 duration-300"
             />
+            <span className="text-white font-bold text-xl hidden md:block">Vértice</span>
           </a>
-          <div className="flex items-center space-x-4">
-            <a href="#" className="text-white/80 hover:text-white transition">
-              Sobre
+          <div className="flex items-center space-x-6">
+            <a href="#about" className="text-white/90 hover:text-white transition relative group">
+              <span>Sobre</span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#aprovados" className="text-white/80 hover:text-white transition">
-              Aprovados
+            <a href="#aprovados" className="text-white/90 hover:text-white transition relative group">
+              <span>Aprovados</span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href=''  className="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600 transition shadow-xl hover:shadow-pink-500/30 font-semibold">
+            <a 
+              href="/bolsao" 
+              className="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-5 py-2 rounded-full hover:from-amber-600 hover:to-orange-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-amber-500/30 font-medium animate-pulse-slow"
+            >
+              Bolsão 2025
+            </a>
+            <a href="#contato" className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-5 py-2 rounded-full hover:from-pink-600 hover:to-purple-600 transition shadow-xl hover:shadow-pink-500/40 font-medium">
               Fale Conosco
             </a>
           </div>
@@ -53,41 +60,63 @@ function App() {
       </header>
 
       {/* =================== HERO SECTION =================== */}
-      <section className="relative flex items-center min-h-screen pt-24 pb-20">
+      <section className="relative flex items-center min-h-screen pt-28 pb-24">
         {/* Background com a imagem */}
         <div className="absolute inset-0 overflow-hidden -z-10">
           <img
             src={bgImage} // Atualizado
             alt="Background Hero"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-[1.02] animate-slow-zoom"
           />
-          <div className="absolute inset-0 bg-black/40" /> {/* Overlay escuro para melhorar a legibilidade do texto */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-transparent" /> {/* Overlay escuro para melhorar a legibilidade do texto */}
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             <div className="lg:w-1/2 text-white">
-              <div className="inline-flex items-center bg-white/10 backdrop-blur-md rounded-full px-4 py-2 mb-6 shadow-xl">
-                <Star className="w-4 h-4 text-yellow-400 mr-2" />
+              <div className="inline-flex items-center bg-white/10 backdrop-blur-md rounded-full px-4 py-2 mb-8 shadow-xl animate-float">
+                <Star className="w-4 h-4 text-yellow-400 mr-2" fill="currentColor" />
                 <span className="text-sm font-medium">
                   Venha garantir sua aprovação!
                 </span>
               </div>
 
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight drop-shadow-lg">
-                Alcance sua aprovação com um dos melhores cursos preparatórios do Brasil.
+              <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight drop-shadow-lg slide-up">
+                Alcance sua <span className="gradient-text bg-gradient-to-r from-emerald-400 to-teal-300">aprovação</span> com o melhor preparatório do Brasil.
               </h1>
-              <p className="text-xl text-white/80 mb-8 leading-relaxed drop-shadow-sm">
+              <p className="text-xl text-white/90 mb-10 leading-relaxed drop-shadow-sm max-w-2xl slide-up" style={{animationDelay: '0.2s'}}>
                 Domine os conteúdos essenciais e aprenda com as melhores estratégias para conquistar sua vaga nos vestibulares e concursos mais concorridos.
               </p>
 
-              <div className="flex flex-wrap gap-4">
-                <button className="bg-pink-500 text-white px-8 py-4 rounded-full hover:bg-pink-600 transition transform hover:scale-105 shadow-2xl hover:shadow-pink-500/30 font-semibold">
+              <div className="flex flex-wrap gap-5 slide-up" style={{animationDelay: '0.4s'}}>
+                <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full hover:scale-105 transition transform duration-300 shadow-2xl hover:shadow-pink-500/30 font-semibold">
                   Comece Agora Mesmo
                 </button>
-                <button className="bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-full hover:bg-white/20 transition transform hover:scale-105 font-semibold">
+                <button className="glass-effect text-white px-8 py-4 rounded-full hover:bg-white/20 transition transform hover:scale-105 font-semibold border border-white/20">
                   Conheça o Método
                 </button>
+              </div>
+            </div>
+            
+            <div className="hidden lg:block lg:w-2/5 relative">
+              <div className="absolute -top-10 -right-10 w-24 h-24 bg-emerald-400/20 rounded-full animate-pulse-glow"></div>
+              <div className="absolute -bottom-5 -left-5 w-16 h-16 bg-pink-400/20 rounded-full animate-pulse-glow" style={{animationDelay: '1s'}}></div>
+              <div className="w-full aspect-square bg-gradient-to-br from-emerald-500/20 to-teal-500/20 backdrop-blur-sm rounded-3xl border border-white/10 p-8 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+                <div className="flex flex-col h-full justify-between">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-emerald-500 flex items-center justify-center">
+                      <Award className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-white font-bold">Preparação Completa</h3>
+                      <p className="text-white/70 text-sm">Todo material necessário</p>
+                    </div>
+                  </div>
+                  <div className="mt-auto text-white/90 text-right">
+                    <p className="font-bold text-3xl">+500</p>
+                    <p>Alunos aprovados</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
